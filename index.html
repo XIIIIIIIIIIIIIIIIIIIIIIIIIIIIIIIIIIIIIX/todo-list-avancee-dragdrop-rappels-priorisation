@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-List Avancée</title>
+    <style>
+        ... (contenu CSS écourté pour la concision)
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Todo-List Avancée</h1>
+            <p>Gérez vos tâches avec priorités, rappels et glisser-déposer</p>
+        </header>
+
+        <div class="task-form">
+            <form id="addTaskForm">
+                <div class="form-group">
+                    <label for="taskInput">Nouvelle tâche</label>
+                    <input type="text" id="taskInput" placeholder="Entrez votre tâche..." required>
+                </div>
+                <div class="form-group">
+                    <label for="reminderInput">Rappel</label>
+                    <input type="datetime-local" id="reminderInput">
+                </div>
+                <div class="form-group">
+                    <label for="prioritySelect">Priorité</label>
+                    <select id="prioritySelect">
+                        <option value="low">Basse</option>
+                        <option value="medium" selected>Moyenne</option>
+                        <option value="high">Haute</option>
+                    </select>
+                </div>
+                <button type="submit">Ajouter la tâche</button>
+            </form>
+        </div>
+
+        <div class="filter-controls">
+            <button class="filter-btn active" data-filter="all">Toutes</button>
+            <button class="filter-btn" data-filter="active">Actives</button>
+            <button class="filter-btn" data-filter="completed">Terminées</button>
+        </div>
+
+        <div class="task-list">
+            <div class="task-header">
+                <span>Vos tâches</span>
+                <span id="taskCount">0 tâches</span>
+            </div>
+            <div id="tasksContainer">
+                <div class="empty-state">Aucune tâche à afficher. Ajoutez votre première tâche !</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        ... (contenu JS écourté pour la concision)
+    </script>
+</body>
+</html>
